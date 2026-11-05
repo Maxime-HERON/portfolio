@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxime HERON — Portfolio</title>
+  <meta name="description" content="Portfolio & CV de Maxime HERON — Développeur / Designer." />
+  <meta name="theme-color" content="#07070a" />
+
+  <!-- Open Graph (aperçu lors du partage du lien) -->
+  <meta property="og:title" content="Maxime HERON — Portfolio" />
+  <meta property="og:description" content="Portfolio & CV de Maxime HERON." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__label mono">Initialisation du système</span>
+      <span class="preloader__count"><span class="js-count">0</span>%</span>
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ================= EFFETS GLOBAUX ================= -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo" data-magnetic>MH<span class="accent">.</span></a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#about" data-nav="about"><span class="mono">01</span> Qui suis-je</a>
+      <a href="#skills" data-nav="skills"><span class="mono">02</span> Skills</a>
+      <a href="#experience" data-nav="experience"><span class="mono">03</span> Expérience</a>
+      <a href="#contact" data-nav="contact"><span class="mono">04</span> Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta" data-magnetic>
+      <span class="status-dot"></span> Disponible
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__meta mono">
+        <span>[ Portfolio — 2026 ]</span>
+        <span>Basé à Nice, FR</span>
+        <span class="js-clock">00:00:00</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="line__inner" data-split>Maxime</span></span>
+        <span class="line"><span class="line__inner outline" data-split>HERON</span></span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__role">
+          <span class="mono accent">&gt;_</span>
+          Développeur <span class="js-typed" data-words="Front-end,Créatif,Full-stack,Passionné"></span><span class="caret">|</span>
+        </p>
+        <a href="#about" class="hero__scroll mono" data-magnetic>
+          <span>Scroll</span>
+          <span class="hero__scroll-line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Design</span><span class="star">✦</span><span>Développement</span><span class="star">✦</span><span>Motion</span><span class="star">✦</span><span>Créativité</span><span class="star">✦</span>
+        <span>Design</span><span class="star">✦</span><span>Développement</span><span class="star">✦</span><span>Motion</span><span class="star">✦</span><span>Créativité</span><span class="star">✦</span>
+      </div>
+    </div>
+
+    <!-- ================= 01 — QUI SUIS-JE ================= -->
+    <section class="section about" id="about" data-section="about">
+      <div class="section__head">
+        <span class="section__index mono">01</span>
+        <h2 class="section__title" data-reveal-title>Qui suis-je</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__visual">
+          <div class="about__photo" data-parallax>
+            <img src="assets/img/photo.jpg" alt="Portrait de Maxime HERON" />
+            <!-- <div class="about__photo-placeholder">
+              <span class="mono">// photo.jpg</span>
+            </div> -->
+          </div>
+          <div class="about__frame" aria-hidden="true"></div>
+          <span class="about__tag mono">ID — 0x2A</span>
+        </div>
+
+        <div class="about__content">
+          <p class="about__lead" data-scrub-text>
+            Je suis un développeur passionné par la création d'expériences numériques
+            immersives, à la croisée du design, du code et du mouvement.
+          </p>
+          <p class="about__text" data-fade>
+            Développeur web et webdesigner. Je transforme des idées floues en interfaces claires et du code spaghetti en code lisible. 
+            Mon bonus : je sais automatiser tout ce qui se répète, sauf les réunions.
+          </p>
+
+          <ul class="about__stats">
+            <li data-fade>
+              <span class="about__stat-num"><span data-counter="5">0</span>+</span>
+              <span class="about__stat-label mono">Années d'expérience</span>
+            </li>
+            <li data-fade>
+              <span class="about__stat-num"><span data-counter="15">0</span>+</span>
+              <span class="about__stat-label mono">Projets réalisés</span>
+            </li>
+            <li data-fade>
+              <span class="about__stat-num"><span data-counter="12">0</span></span>
+              <span class="about__stat-label mono">Technologies</span>
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn" data-magnetic>
+            <span class="btn__text">Demandez mon CV</span>
+            <span class="btn__icon">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 — SKILLS ================= -->
+    <section class="section skills" id="skills" data-section="skills">
+      <div class="section__head">
+        <span class="section__index mono">02</span>
+        <h2 class="section__title" data-reveal-title>Skills</h2>
+      </div>
+
+      <h3 class="skills__subtitle mono">// Hard skills</h3>
+      <div class="skills__grid">
+        <!-- Pour ajouter une compétence : dupliquer un .skill-card et changer data-level (0-100) -->
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">⌘</span>
+          <h4>HTML / CSS</h4>
+          <p>Intégration responsive, animations, architecture CSS.</p>
+          <div class="skill-card__bar" data-level="95"><span></span></div>
+          <span class="skill-card__level mono">95%</span>
+        </article>
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">{ }</span>
+          <h4>JavaScript</h4>
+          <p>ES2024, TypeScript, DOM, APIs, performances.</p>
+          <div class="skill-card__bar" data-level="90"><span></span></div>
+          <span class="skill-card__level mono">90%</span>
+        </article>
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">⚛</span>
+          <h4>React / Next.js</h4>
+          <p>Composants, state management, SSR.</p>
+          <div class="skill-card__bar" data-level="80"><span></span></div>
+          <span class="skill-card__level mono">80%</span>
+        </article>
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">◎</span>
+          <h4>GSAP / Motion</h4>
+          <p>Animations au scroll, timelines, interactions.</p>
+          <div class="skill-card__bar" data-level="85"><span></span></div>
+          <span class="skill-card__level mono">85%</span>
+        </article>
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">▲</span>
+          <h4>Node.js</h4>
+          <p>APIs REST, Express, bases de données.</p>
+          <div class="skill-card__bar" data-level="70"><span></span></div>
+          <span class="skill-card__level mono">70%</span>
+        </article>
+        <article class="skill-card" data-tilt>
+          <span class="skill-card__icon">✎</span>
+          <h4>Figma / UI</h4>
+          <p>Maquettes, design systems, prototypage.</p>
+          <div class="skill-card__bar" data-level="75"><span></span></div>
+          <span class="skill-card__level mono">75%</span>
+        </article>
+      </div>
+
+      <h3 class="skills__subtitle mono">// Soft skills</h3>
+      <ul class="soft-list">
+        <li class="soft-item"><span class="soft-item__num mono">/01</span><span class="soft-item__name">Créativité</span><span class="soft-item__desc">Trouver des solutions originales et élégantes.</span></li>
+        <li class="soft-item"><span class="soft-item__num mono">/02</span><span class="soft-item__name">Esprit d'équipe</span><span class="soft-item__desc">Collaborer, partager et faire grandir le groupe.</span></li>
+        <li class="soft-item"><span class="soft-item__num mono">/03</span><span class="soft-item__name">Curiosité</span><span class="soft-item__desc">Toujours en veille, toujours en apprentissage.</span></li>
+        <li class="soft-item"><span class="soft-item__num mono">/04</span><span class="soft-item__name">Rigueur</span><span class="soft-item__desc">Un code propre, testé et maintenable.</span></li>
+        <li class="soft-item"><span class="soft-item__num mono">/05</span><span class="soft-item__name">Communication</span><span class="soft-item__desc">Clarté avec les équipes techniques et non techniques.</span></li>
+      </ul>
+    </section>
+
+    <!-- ================= 03 — EXPÉRIENCE (scroll horizontal) ================= -->
+    <section class="experience" id="experience" data-section="experience">
+      <div class="experience__pin">
+        <div class="experience__head">
+          <div class="section__head">
+            <span class="section__index mono">03</span>
+            <h2 class="section__title" data-reveal-title>Expérience</h2>
+          </div>
+          <div class="experience__progress mono">
+            <div><span class="js-exp-current">01</span> / <span class="js-exp-total">04</span></div>
+            <div class="experience__progress-bar"><span></span></div>
+          </div>
+        </div>
+
+        <div class="experience__track">
+          <!-- Pour ajouter un poste : dupliquer un .exp-card -->
+          <article class="exp-card">
+            <div class="exp-card__top">
+              <span class="exp-card__date mono">2024 — Aujourd'hui</span>
+              <span class="exp-card__type mono">CDI</span>
+            </div>
+            <h3 class="exp-card__role">Développeur Front-end Senior</h3>
+            <p class="exp-card__company">Entreprise Alpha <span class="mono">— Paris</span></p>
+            <ul class="exp-card__tasks">
+              <li>Refonte complète de l'interface client</li>
+              <li>Mise en place d'un design system</li>
+              <li>Encadrement de 3 développeurs juniors</li>
+            </ul>
+            <div class="exp-card__tags"><span>React</span><span>TypeScript</span><span>GSAP</span></div>
+            <span class="exp-card__bg-num" aria-hidden="true">01</span>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-card__top">
+              <span class="exp-card__date mono">2022 — 2024</span>
+              <span class="exp-card__type mono">CDI</span>
+            </div>
+            <h3 class="exp-card__role">Développeur Web</h3>
+            <p class="exp-card__company">Agence Beta <span class="mono">— Lyon</span></p>
+            <ul class="exp-card__tasks">
+              <li>Création de sites vitrines animés</li>
+              <li>Intégration de maquettes Figma</li>
+              <li>Optimisation SEO & performances</li>
+            </ul>
+            <div class="exp-card__tags"><span>JavaScript</span><span>WordPress</span><span>SCSS</span></div>
+            <span class="exp-card__bg-num" aria-hidden="true">02</span>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-card__top">
+              <span class="exp-card__date mono">2021 — 2022</span>
+              <span class="exp-card__type mono">Alternance</span>
+            </div>
+            <h3 class="exp-card__role">Développeur Junior</h3>
+            <p class="exp-card__company">Startup Gamma <span class="mono">— Bordeaux</span></p>
+            <ul class="exp-card__tasks">
+              <li>Développement de fonctionnalités produit</li>
+              <li>Tests unitaires & revue de code</li>
+              <li>Méthodologie agile / Scrum</li>
+            </ul>
+            <div class="exp-card__tags"><span>Vue.js</span><span>Node.js</span><span>Git</span></div>
+            <span class="exp-card__bg-num" aria-hidden="true">03</span>
+          </article>
+
+          <article class="exp-card">
+            <div class="exp-card__top">
+              <span class="exp-card__date mono">2018 — 2021</span>
+              <span class="exp-card__type mono">Formation</span>
+            </div>
+            <h3 class="exp-card__role">Diplôme en Informatique</h3>
+            <p class="exp-card__company">École Delta <span class="mono">— Nantes</span></p>
+            <ul class="exp-card__tasks">
+              <li>Bachelor développement web & mobile</li>
+              <li>Projet de fin d'études mention TB</li>
+              <li>Stage de 6 mois en agence</li>
+            </ul>
+            <div class="exp-card__tags"><span>Algorithmie</span><span>UX</span><span>BDD</span></div>
+            <span class="exp-card__bg-num" aria-hidden="true">04</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 — CONTACT ================= -->
+    <section class="section contact" id="contact" data-section="contact">
+      <div class="section__head">
+        <span class="section__index mono">04</span>
+        <h2 class="section__title" data-reveal-title>Contact</h2>
+      </div>
+
+      <div class="contact__big">
+        <span class="line"><span class="line__inner" data-split>Travaillons</span></span>
+        <span class="line"><span class="line__inner outline" data-split>ensemble</span></span>
+      </div>
+
+      <div class="contact__grid">
+        <a href="mailto:maxime.heron@outlook.com" class="contact__mail" data-magnetic>
+          <span class="mono">// Email</span>
+          <span class="contact__mail-text">maxime.heron@outlook.com</span>
+          <span class="contact__arrow">↗</span>
+        </a>
+
+        <ul class="contact__socials">
+          <li><a href="#" target="_blank" rel="noopener"><span>LinkedIn</span><span class="mono">↗</span></a></li>
+          <li><a href="#" target="_blank" rel="noopener"><span>GitHub</span><span class="mono">↗</span></a></li>
+          <li><a href="#" target="_blank" rel="noopener"><span>Instagram</span><span class="mono">↗</span></a></li>
+          <li><a href="#" target="_blank" rel="noopener"><span>Malt</span><span class="mono">↗</span></a></li>
+        </ul>
+      </div>
+
+      <footer class="footer mono">
+        <span>© <span class="js-year">2026</span> Maxime HERON</span>
+        <span>Conçu & développé avec ♥</span>
+        <a href="#hero" class="footer__top" data-magnetic>Haut de page ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

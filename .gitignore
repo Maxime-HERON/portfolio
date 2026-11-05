@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Dépendances / build (si on passe un jour à Vite / npm)
+node_modules/
+dist/
+.cache/
+
+# Environnement
+.env
+.env.*
+
+# Logs
+*.log
+
+# Hébergeurs
+.vercel/
+.netlify/
+
+# Claude Code (config locale)
+.claude/settings.local.json
