@@ -46,10 +46,10 @@ img { display: block; max-width: 100%; }
 .accent { color: var(--accent); }
 /* Texte en dégradé néon (le contour -webkit-text-stroke montre les
    chevauchements de tracés des polices variables, on l'évite) */
-.outline, .outline .char {
+.outline {
   background: linear-gradient(100deg, var(--accent-2) 0%, #b9a8ff 45%, var(--accent) 100%);
   -webkit-background-clip: text; background-clip: text;
-  color: transparent;
+  color: transparent; -webkit-text-fill-color: transparent;
 }
 
 /* ---------- Preloader ---------- */

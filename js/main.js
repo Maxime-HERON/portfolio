@@ -64,20 +64,11 @@
     return $$(".word", el);
   }
 
-  $$("[data-split]").forEach(splitChars);
+  // Les mots en dégradé (.outline) ne sont pas découpés : un dégradé
+  // « background-clip: text » disparaît sur des lettres animées une par une
+  // dans certains navigateurs. Ils sont animés d'un seul bloc.
+  $$("[data-split]:not(.outline)").forEach(splitChars);
 
-  // Dégradé continu sur un mot découpé : chaque lettre affiche sa portion
-  const alignGradients = () =>
-    $$(".outline").forEach((el) => {
-      const width = el.offsetWidth;
-      $$(".char", el).forEach((c) => {
-        c.style.backgroundSize = `${width}px 100%`;
-        c.style.backgroundPosition = `${el.offsetLeft - c.offsetLeft}px 0`;
-      });
-    });
-  alignGradients();
-  window.addEventListener("resize", alignGradients);
-  document.fonts?.ready.then(alignGradients);
   $$("[data-reveal-title]").forEach((t) => {
     t.innerHTML = `<span class="line"><span class="line__inner">${t.textContent}</span></span>`;
     splitChars($(".line__inner", t));
@@ -89,7 +80,7 @@
   }
 
   /* ---------------- Preloader ---------------- */
-  const heroChars = $$(".hero__title .char");
+  const heroChars = [...$$(".hero__title .char"), ...$$(".hero__title .outline")];
   gsap.set(heroChars, { yPercent: 115 });
   gsap.set([".hero__meta", ".hero__bottom", ".nav"], { autoAlpha: 0 });
 
@@ -247,7 +238,7 @@
   });
 
   /* ---------------- 04 — Contact ---------------- */
-  const contactChars = $$(".contact__big .char");
+  const contactChars = [...$$(".contact__big .char"), ...$$(".contact__big .outline")];
   gsap.from(contactChars, {
     yPercent: 115, duration: 1.2, ease: "expo.out", stagger: 0.025,
     scrollTrigger: { trigger: ".contact__big", start: "top 80%" },
